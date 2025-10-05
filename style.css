@@ -5,71 +5,245 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Fondo degradado */
+/* Fondo general */
 body {
-  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  background: linear-gradient(135deg, #1e293b, #0f172a);
   min-height: 100vh;
-  padding: 20px;
-  color: #333;
+  padding: 30px;
+  color: #e2e8f0;
 }
 
-/* Título principal */
+/* Título */
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #2d3436;
-  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #f1f5f9;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-/* Botones */
+/* Botones generales */
 button {
-  background: #6c5ce7;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
   border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 22px;
   margin: 5px;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
   font-size: 1rem;
+  font-weight: 500;
 }
 
 button:hover {
-  background: #a29bfe;
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+  transform: scale(1.06);
 }
 
-/* Contenedor principal */
-#root {
+/* === Buscador === */
+.c-buscador {
+  display: block;
+  width: 250px;
+  padding: 10px 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 2px solid #3b82f6;
+  font-size: 16px;
+  background: #0f172a;
+  color: #e2e8f0;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.c-buscador::placeholder {
+  color: #94a3b8;
+}
+
+/* Contenedor de filtros */
+.continentes-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Lista de países*/
+.c-contenedor-lista {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 10px;
 }
 
-/* Tarjeta de país */
+/* Tarjeta de país (UNIFICADO) */
 .country-card {
-  background: white;
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #0f172a;
+  border-radius: 16px;
+  padding: 18px;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#0f172a, #0f172a),
+    linear-gradient(135deg, #3b82f6, #06b6d4);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   text-align: center;
-  transition: 0.3s ease-in-out;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .country-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
 }
 
+/* Imagen bandera */
 .country-card img {
-  width: 80px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #3b82f6;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Nombre país */
 .country-card strong {
   display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #e2e8f0;
+}
+
+/* Capital */
+.country-card p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+/* Imagen bandera con borde y caja */
+.country-card img {
+  width: 100px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 2px solid #3b82f6;
+  background: #1e293b;
+  padding: 6px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Estolos de la Inforcacion de paises*/
+.c-lista-pais {
+  background: rgba(30, 41, 59, 0.6); /* fondo translúcido */
+  border: 2px solid #3b82f6;        /* borde azul */
+  border-radius: 12px;              /* esquinas redondeadas */
+  padding: 12px;
+  margin: 8px;
+  width: 180px;                     /* ancho fijo opcional */
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.c-lista-pais:hover {
+  transform: translateY(-5px); /* efecto levantar */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.c-lista-pais strong {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #f1f5f9;
+}
+
+.c-lista-pais img {
+  width: 60px;
+  height: auto;
+  margin: 8px 0;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(255,255,255,0.2);
+}
+
+.c-lista-pais p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+/* ---Estilo general del detalle del país--- */
+.detalle-pais {
+  background: #1e293b;
+  border: 2px solid #3b82f6;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  max-width: 500px;
+  margin: 40px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detalle-pais:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+}
+
+.detalle-pais h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #60a5fa;
+}
+
+.detalle-pais img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.detalle-pais p {
   font-size: 1.1rem;
-  margin-bottom: 5px;
+  margin: 8px 0;
+  color: #cbd5e1;
+}
+
+.detalle-pais a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.detalle-pais a:hover {
+  background: #2563eb;
+}
+
+/* --- Botón volver --- */
+.btn-volver {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 18px;
+  background: transparent;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+  background: #3b82f6;
+  color: #fff;
 }
