@@ -106,3 +106,51 @@ async function Detalle(parametro) {
     `;
   }
 }
+
+// Apartado bonito para ver en la app :v
+function Informativa(){
+  const root = document.getElementById("root");
+  root.innerHTML = `
+    <section class="info-extra">
+      <h2>🌍Información General del Mundo</h2>
+      <p>
+        Este apartado ofrece datos generales sobre nuestro planeta y los países que lo conforman.
+        GlobeScope utiliza la API pública <strong>RestCountries</strong> para mostrar información actualizada y confiable.
+      </p>
+
+      <div class="cards-info">
+        <div class="card">
+          <h3>🌎 Total de países</h3>
+          <p><strong>195</strong> países reconocidos internacionalmente</p>
+        </div>
+
+        <div class="card">
+          <h3>👥 País más poblado</h3>
+          <p><strong>India</strong> — más de <strong>1.4 mil millones</strong> de habitantes</p>
+        </div>
+
+        <div class="card">
+          <h3>🗺️ País más grande</h3>
+          <p><strong>Rusia</strong> — cerca de <strong>17 millones km²</strong> de superficie</p>
+        </div>
+
+        <div class="card">
+          <h3>🏝️ País más pequeño</h3>
+          <p><strong>El Vaticano</strong> — solo <strong>0.44 km²</strong> de extensión</p>
+        </div>
+
+        <div class="card">
+          <h3>💰 País con mayor PIB</h3>
+          <p><strong>Estados Unidos</strong> — más de <strong>25 billones USD</strong></p>
+        </div>
+      </div>
+
+      <div class="curioso">
+        <h3>🧠 Dato curioso</h3>
+        <p>🌋 Islandia no tiene ejército, pero sí una fuerza de rescate voluntaria reconocida mundialmente.</p>
+      </div>
+
+      <p class="extra">✨ GlobeScope — Aprende, explora y entiende el mundo desde un solo lugar.</p>
+    </section>
+  `;
+}

@@ -70,7 +70,7 @@ button:hover {
   flex-wrap: wrap;
 }
 
-/* Lista de países*/
+/* Lista de países */
 .c-contenedor-lista {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -84,8 +84,7 @@ button:hover {
   border-radius: 16px;
   padding: 18px;
   border: 2px solid transparent;
-  background-image: linear-gradient(#0f172a, #0f172a),
-    linear-gradient(135deg, #3b82f6, #06b6d4);
+  background-image: linear-gradient(#0f172a, #0f172a), linear-gradient(135deg, #3b82f6, #06b6d4);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   text-align: center;
@@ -103,10 +102,12 @@ button:hover {
 .country-card img {
   width: 100px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 12px;
-  border: 1px solid #3b82f6;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #3b82f6;
+  background: #1e293b;
+  padding: 6px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
 }
 
 /* Nombre país */
@@ -124,33 +125,21 @@ button:hover {
   color: #94a3b8;
 }
 
-/* Imagen bandera con borde y caja */
-.country-card img {
-  width: 100px;
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  border: 2px solid #3b82f6;
-  background: #1e293b;
-  padding: 6px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
-}
-
-/* Estolos de la Inforcacion de paises*/
+/* === Estilos de la Información de países === */
 .c-lista-pais {
   background: rgba(30, 41, 59, 0.6); /* fondo translúcido */
-  border: 2px solid #3b82f6;        /* borde azul */
-  border-radius: 12px;              /* esquinas redondeadas */
+  border: 2px solid #3b82f6; /* borde azul */
+  border-radius: 12px; /* esquinas redondeadas */
   padding: 12px;
   margin: 8px;
-  width: 180px;                     /* ancho fijo opcional */
+  width: 180px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
 
 .c-lista-pais:hover {
-  transform: translateY(-5px); /* efecto levantar */
+  transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -176,7 +165,7 @@ button:hover {
   margin-top: 6px;
 }
 
-/* Estilo general del detalle del país*/
+/* === Estilo general del detalle del país === */
 .detalle-pais {
   background: #1e293b;
   border: 2px solid #3b82f6;
@@ -248,13 +237,13 @@ button:hover {
   color: #fff;
 }
 
-/* Sección de Información de la App (Original) */
+/* === Sección de Información de la App === */
 .info-app {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 35px; /* separación entre secciones */
+  gap: 35px;
   padding: 50px 20px;
   max-width: 1000px;
   margin: 0 auto;
@@ -341,20 +330,18 @@ button:hover {
   text-decoration: underline;
 }
 
-/* 🌍 --- ESTILO DE SECCIÓN FAVORITOS --- */
+/* --- ESTILO DE SECCIÓN FAVORITOS --- */
 
-.c-favoritos {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #0b132b;
-  color: #d9e6ff;
-  min-height: 100vh;
-  animation: aparecerSuave 0.5s ease-in-out;
-}
 
 @keyframes aparecerSuave {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .c-favoritos h2 {
@@ -393,7 +380,7 @@ button:hover {
 }
 
 .pais-favorito h3 {
-  color: rgb(5, 69, 247)118, 253);
+  color: #0565f7;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
@@ -413,7 +400,7 @@ button:hover {
   margin: 0;
 }
 
-/* Botón volver */
+/* Botón volver (favoritos) */
 .btn-volver {
   background-color: #1c77c3;
   color: #fff;
@@ -427,11 +414,82 @@ button:hover {
 }
 
 .btn-volver:hover {
-  background-color: rgb(5, 69, 247)118, 253);
+  background-color: #0565f7;
   color: #000;
   box-shadow: 0 0 15px rgba(255, 203, 5, 0.6);
   transform: scale(1.05);
 }
 
+/* Apartado de estilos de "Informativo" */
+.info-extra {
+  background: rgba(15, 23, 42, 0.9);
+  border: 2px solid #3b82f6;
+  border-radius: 16px;
+  padding: 35px 25px;
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+  color: #e2e8f0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  font-family: "Poppins", sans-serif;
+}
 
+.info-extra h2 {
+  color: #60a5fa;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.info-extra p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* 🔹 Tarjetas con datos */
+.cards-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid #3b82f6;
+  border-radius: 14px;
+  padding: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.card h3 {
+  color: #38bdf8;
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.curioso {
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid #3b82f6;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.curioso h3 {
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.extra {
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
 

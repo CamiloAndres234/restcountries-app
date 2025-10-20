@@ -46,3 +46,35 @@ function DetallePais(nombrePais) {
         </div>
     `;
 }
+
+function Countries() {
+  const root = document.getElementById("root");
+  root.innerHTML = `
+    <section class="credits">
+      <h2>👨‍💻 Créditos del Proyecto</h2>
+      <p>Desarrollado por <strong>Camilo Andrés Alarcón</strong> como parte de un proyecto académico y eso :v.</p>
+
+      <div class="cards-info">
+        <div class="card">
+          <h3>🎯 Objetivo</h3>
+          <p>Combinar diseño, funcionalidad y acceso a datos en una sola experiencia web sencilla pero informativa.</p>
+        </div>
+
+        <div class="card">
+          <h3>🔧 Enfoque</h3>
+          <p>Aplicación orientada al aprendizaje práctico del uso de <strong>fetch API</strong> y manipulación del <strong>DOM</strong>.</p>
+        </div>
+
+        <div class="card">
+          <h3>📬 Contacto</h3>
+          <p>Si GlobeScope te inspiró, recuerda que todo gran viaje empieza con una simple línea de código 🚀</p>
+        </div>
+      </div>
+
+      <p class="extra">PD: No hay modo oscuro… porque ya somos programadores, y el modo oscuro somos nosotros 😎</p>
+    </section>
+  `;
+}
+
+
+

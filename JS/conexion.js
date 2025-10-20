@@ -35,3 +35,8 @@ async function FiltroConexion(Elfiltro) {
   const listaHTML = generarListaPaises(countries); // generar HTML
   document.getElementById("countries-grid").innerHTML = listaHTML; // pintar en pantalla
 }
+
+function Conexion() {
+    // Mostrar alerta interna
+  alert("⚙️ Apartado interno de la app — conexión activa, no molestar 😎");
+}
