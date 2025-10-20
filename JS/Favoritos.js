@@ -1,5 +1,4 @@
 function Favoritos() {
-  alert("Abriendo sección de favoritos..."); // 🧩 para probar si se ejecuta
 
   const root = document.getElementById("root");
   const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
