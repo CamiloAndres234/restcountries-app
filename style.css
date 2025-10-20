@@ -5,28 +5,73 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  background: linear-gradient(180deg, #001f3f 0%, #0047ab 100%);
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  color: white;
-  transition: background 0.5s ease;
-}
+/* === Ajustes generales de espaciado y alineación === */
 
+/* Añade espacio general alrededor del contenido principal */
 .App {
   min-height: 100vh;
   background: transparent;
+  padding: 40px 25px; /* Espacio interno lateral y superior */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Secciones principales (lista, info, favoritos, etc.) */
+.c-contenedor-lista,
+.info-app,
+.c-favoritos,
+.info-extra {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 30px 20px;
+  border-radius: 20px;
+}
 
-/* Título */
-h1 {
-  text-align: center;
+/* Centramos las listas y evitamos que toquen los bordes */
+.c-contenedor-lista,
+.lista-favoritos {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+}
+
+/* Buscador y filtros mejor centrados */
+.c-buscador {
+  display: block;
+  margin: 40px auto 25px auto;
+}
+
+.continentes-container {
+  margin-bottom: 40px;
+}
+
+/* Títulos principales con más aire */
+h1, h2 {
+  margin-top: 30px;
   margin-bottom: 25px;
-  color: #f1f5f9;
-  font-size: 2.2rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+}
+
+/* Ajustes para tarjetas */
+.country-card,
+.pais-favorito,
+.card {
+  margin: 10px auto;
+}
+
+/* --- Ajuste del body para que no quede tan “pegado” arriba --- */
+body {
+  background: linear-gradient(180deg, #001f3f 0%, #0047ab 100%);
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Mejor alineación general del texto */
+p, strong, h3 {
+  line-height: 1.6;
 }
 
 /* Botones generales */
