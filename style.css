@@ -176,7 +176,7 @@ button:hover {
   margin-top: 6px;
 }
 
-/* ---Estilo general del detalle del país--- */
+/* Estilo general del detalle del país*/
 .detalle-pais {
   background: #1e293b;
   border: 2px solid #3b82f6;
@@ -247,3 +247,191 @@ button:hover {
   background: #3b82f6;
   color: #fff;
 }
+
+/* Sección de Información de la App (Original) */
+.info-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 35px; /* separación entre secciones */
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Imagen decorativa */
+.banner-poke {
+  width: 250px;
+  height: auto;
+  margin-bottom: 10px;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.banner-poke:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Título principal */
+.info-app h2 {
+  font-size: 2.3rem;
+  color: #60a5fa;
+  text-shadow: 2px 2px 0 #1e3a8a;
+}
+
+/* Descripción */
+.info-app p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 800px;
+  color: #e2e8f0;
+}
+
+/* Contenedor de tarjetas */
+.tarjetas-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Tarjetas individuales */
+.country-card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 16px;
+  padding: 25px 30px;
+  border: 2px solid #3b82f6;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease-in-out;
+  max-width: 850px;
+  width: 90%;
+}
+
+.country-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+}
+
+/* Título de tarjeta */
+.country-card h3 {
+  color: #38bdf8;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+/* Texto de tarjeta */
+.country-card p {
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Enlaces dentro del texto */
+.country-card a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.country-card a:hover {
+  text-decoration: underline;
+}
+
+/* 🌍 --- ESTILO DE SECCIÓN FAVORITOS --- */
+
+.c-favoritos {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #0b132b;
+  color: #d9e6ff;
+  min-height: 100vh;
+  animation: aparecerSuave 0.5s ease-in-out;
+}
+
+@keyframes aparecerSuave {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.c-favoritos h2 {
+  color: #4da8ff;
+  font-size: 2.2em;
+  margin-bottom: 35px;
+  text-shadow: 0 0 10px rgba(77, 168, 255, 0.5);
+}
+
+/* Contenedor de tarjetas */
+.lista-favoritos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  margin-bottom: 50px;
+}
+
+/* Tarjetas individuales */
+.pais-favorito {
+  background: #1c2541;
+  border: 2px solid #3a506b;
+  border-radius: 15px;
+  width: 220px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.pais-favorito:hover {
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 0 0 20px rgba(77, 168, 255, 0.6);
+  border-color: #4da8ff;
+}
+
+.pais-favorito h3 {
+  color: rgb(5, 69, 247)118, 253);
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.pais-favorito img {
+  width: 100px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #3a506b;
+  margin-bottom: 10px;
+}
+
+.pais-favorito p {
+  color: #dce3f0;
+  font-size: 0.95em;
+  margin: 0;
+}
+
+/* Botón volver */
+.btn-volver {
+  background-color: #1c77c3;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(28, 119, 195, 0.5);
+}
+
+.btn-volver:hover {
+  background-color: rgb(5, 69, 247)118, 253);
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 203, 5, 0.6);
+  transform: scale(1.05);
+}
+
+
+

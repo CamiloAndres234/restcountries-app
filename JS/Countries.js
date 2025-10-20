@@ -1,7 +1,6 @@
-// --- Función para mostrar el detalle del país ---
 function DetallePais(nombrePais) {
     // Buscar el país (ignorando mayúsculas)
-    const pais = countries.find(c => 
+    const pais = countries.find(c =>
         c.name?.common && c.name.common.toLowerCase() === nombrePais.toLowerCase()
     );
 
@@ -9,6 +8,10 @@ function DetallePais(nombrePais) {
         alert("No se encontró información del país seleccionado.");
         return;
     }
+
+    // Verificar si ya está en favoritos
+    const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    const esFavorito = favoritos.some(p => p.name === pais.name.common);
 
     // Variables con datos del país
     const bandera = pais.flags?.svg || pais.flags?.png || "";
@@ -18,7 +21,6 @@ function DetallePais(nombrePais) {
     const area = pais.area ? pais.area.toLocaleString() + " km²" : "No disponible";
     const idioma = pais.languages ? Object.values(pais.languages)[0] : "No disponible";
     const moneda = pais.currencies ? Object.values(pais.currencies)[0].name : "No disponible";
-
 
     const root = document.getElementById("root");
 
@@ -34,14 +36,13 @@ function DetallePais(nombrePais) {
             <p><strong>Moneda:</strong> ${moneda}</p>
 
             <br>
+
+            <button onclick="toggleFavorito('${pais.name.common}', '${pais.name.common}')">
+                <span id="corazon-${pais.name.common}">${esFavorito ? "❤️" : "🤍"}</span> Favorito
+            </button>
+
+            <br><br>
             <button class="btn-volver" onclick="volverHome()">← Volver</button>
         </div>
     `;
-}
-
-// --- Función para volver al inicio ---
-function volverHome() {
-    const root = document.getElementById("root");
-    root.innerHTML = "";
-    Home(); // vuelve a mostrar la lista principal
 }
